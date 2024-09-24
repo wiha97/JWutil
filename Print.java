@@ -1,4 +1,4 @@
-package Util;
+package JWutil;
 
 import java.util.Scanner;
 

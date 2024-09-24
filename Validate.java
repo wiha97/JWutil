@@ -1,4 +1,4 @@
-package Util;
+package JWutil;
 
 public class Validate {
     private static final String RETURN = "<bq";
