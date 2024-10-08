@@ -6,6 +6,7 @@ public class Print {
     public static final String RESET = "\u001B[0m";
     public static final String RED = "\u001B[31m";
     public static final String AMBER = "\u001B[33m";
+    public static final String NAVY = "\033[94m";
     public static final String GREEN = "\u001B[32m";
     public static final String GRAY = "\u001B[90m";
 
@@ -33,7 +34,7 @@ public class Print {
         System.out.print(i);
     }
 
-    public static String error(String text) {
+    public static String alert(String text) {
         return RED + text + RESET;
     }
 
@@ -44,7 +45,7 @@ public class Print {
     public static String good(String text) {
         return GREEN + text + RESET;
     }
-    
+
     public static String info(String text){
         return GRAY + text + RESET;
     }
