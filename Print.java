@@ -8,7 +8,7 @@ public class Print {
     public static final String AMBER = "\u001B[33m";
     public static final String NAVY = "\033[94m";
     public static final String GREEN = "\u001B[32m";
-    public static final String GRAY = "\u001B[90m";
+    public static final String GRAY = "\u001B[1m";
 
     public static void line(String text) {
         System.out.println(text);
@@ -22,7 +22,7 @@ public class Print {
         System.out.println(i);
     }
 
-    public static void Same(String text) {
+    public static void same(String text) {
         System.out.print(text);
     }
 
@@ -57,6 +57,14 @@ public class Print {
                             %s
                 ============%s============""", filler(length, "="), title, filler(length, "="));
     }
+    public static String title(String title, String note) {
+        int length = title.length();
+        return String.format("""
+                ============%s============
+                            %s
+                            %s
+                ============%s============""", filler(length, "="), title, note, filler(length, "="));
+    }
 
     private static String filler(int length) {
         String filler = "";
@@ -84,6 +92,6 @@ public class Print {
 
     //  Does not work in IDE terminal
     public static void clear() {
-        Print.Same("\033[H\033[2J");
+        Print.same("\033[H\033[2J");
     }
 }
